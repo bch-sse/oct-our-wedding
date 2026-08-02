@@ -49,18 +49,24 @@
   const VENUE='서울특별시 강남구 언주로 508';   // 예식장 주소
   const VENUE_NAME='상록아트홀 그랜드볼룸';
 
+  let done=false;
   function showFallback(){
+    if(done) return; done=true;
     el.innerHTML='<div class="map-fallback">지도를 불러오지 못했습니다.<br>아래 지도 앱 버튼을 눌러 위치를 확인해 주세요.</div>';
   }
-  // SDK 로드 실패(키 미설정 등) 시 안내
-  if(typeof kakao==='undefined'||!kakao.maps){
+  // SDK 로드 실패(키 미설정·네트워크 등) 시 안내
+  if(window.__kakaoFailed||typeof kakao==='undefined'||!kakao.maps){
     showFallback();
     return;
   }
+  // 지오코딩이 일정 시간 내 안 끝나면 폴백
+  const guard=setTimeout(showFallback,6000);
   kakao.maps.load(function(){
     const geocoder=new kakao.maps.services.Geocoder();
     geocoder.addressSearch(VENUE, function(result,status){
+      clearTimeout(guard);
       if(status===kakao.maps.services.Status.OK){
+        done=true;
         const coords=new kakao.maps.LatLng(result[0].y, result[0].x);
         const map=new kakao.maps.Map(el,{center:coords,level:4});
         const marker=new kakao.maps.Marker({map:map,position:coords});
@@ -98,20 +104,53 @@ function copyAcc(btn,num){
     prompt('계좌번호를 복사하세요',num);
   });
 }
-// 갤러리 라이트박스 (사진 넣으면 data-src에 경로 지정)
-document.querySelectorAll('#grid .cell').forEach(c=>{
-  c.addEventListener('click',()=>{
-    const src=c.dataset.src;
-    if(!src) return;
-    document.getElementById('lb-img').src=src;
-    document.getElementById('lb').classList.add('on');
+// 갤러리 라이트박스 (좌우 넘기기 + 스와이프 지원)
+(function(){
+  const cells=[...document.querySelectorAll('#grid .cell')];
+  const srcs=cells.map(c=>c.dataset.src).filter(Boolean);
+  let idx=0;
+  const lb=document.getElementById('lb');
+  const lbImg=document.getElementById('lb-img');
+
+  window.showLb=function(i){
+    if(!srcs.length) return;
+    idx=(i+srcs.length)%srcs.length;
+    lbImg.src=srcs[idx];
+    lb.classList.add('on');
+  };
+  window.navLb=function(e,dir){
+    if(e) e.stopPropagation();
+    window.showLb(idx+dir);
+  };
+  window.closeLb=function(e){
+    if(e.target.id==='lb'||e.target.classList.contains('close')||e.target.id==='lb-img'){
+      lb.classList.remove('on');
+    }
+  };
+
+  cells.forEach((c,i)=>{
+    if(!c.dataset.src) return;
+    c.addEventListener('click',()=>window.showLb(srcs.indexOf(c.dataset.src)));
   });
-});
-function closeLb(e){
-  if(e.target.id==='lb'||e.target.classList.contains('close')||e.target.id==='lb-img'){
-    document.getElementById('lb').classList.remove('on');
-  }
-}
+
+  // 키보드(데스크톱)
+  document.addEventListener('keydown',e=>{
+    if(!lb.classList.contains('on')) return;
+    if(e.key==='ArrowRight') window.showLb(idx+1);
+    else if(e.key==='ArrowLeft') window.showLb(idx-1);
+    else if(e.key==='Escape') lb.classList.remove('on');
+  });
+
+  // 터치 스와이프
+  let x0=null;
+  lb.addEventListener('touchstart',e=>{x0=e.changedTouches[0].clientX},{passive:true});
+  lb.addEventListener('touchend',e=>{
+    if(x0===null) return;
+    const dx=e.changedTouches[0].clientX-x0;
+    if(Math.abs(dx)>40) window.showLb(idx+(dx<0?1:-1));
+    x0=null;
+  },{passive:true});
+})();
 // 스크롤 등장
 const io=new IntersectionObserver(es=>{
   es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')});

@@ -18,7 +18,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&display=swap" rel="stylesheet">
 
 <!-- 카카오맵 SDK (JavaScript 키 적용됨) -->
-<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=fc96f2b0bfeb8deb82e54b97a297e946&libraries=services&autoload=false"></script>
+<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=fc96f2b0bfeb8deb82e54b97a297e946&libraries=services&autoload=false" onerror="window.__kakaoFailed=true"></script>
 
 <!-- 스타일 -->
 <link rel="stylesheet" href="style.css">
@@ -209,7 +209,9 @@
 <!-- 라이트박스 -->
 <div class="lightbox" id="lb" onclick="closeLb(event)">
   <button class="close" onclick="closeLb(event)">×</button>
+  <button class="lb-nav lb-prev" onclick="navLb(event,-1)" aria-label="이전 사진">‹</button>
   <img id="lb-img" src="" alt="">
+  <button class="lb-nav lb-next" onclick="navLb(event,1)" aria-label="다음 사진">›</button>
 </div>
 
 
