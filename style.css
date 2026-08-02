@@ -31,6 +31,7 @@ body{
 .hero{
   position:relative;
   min-height:96vh;
+  min-height:96svh;
   padding:0 28px;
   text-align:center;
   color:#fff;
@@ -238,12 +239,13 @@ section{padding:52px 32px}
   display:inline-flex;align-items:center;justify-content:center;gap:6px;
   margin-top:22px;
   text-decoration:none;
-  background:var(--accent);color:#fff;
+  background:var(--paper);color:var(--accent-deep);
+  border:1px solid var(--line);
   padding:13px 24px;border-radius:10px;
   font-size:14px;letter-spacing:.02em;
   transition:.15s;
 }
-.call-btn:active{background:var(--accent-deep)}
+.call-btn:active{background:var(--blush)}
 
 /* ── 갤러리 ── */
 .gallery{background:var(--cream)}
@@ -279,6 +281,13 @@ section{padding:52px 32px}
 .account .lead{
   text-align:center;font-size:14.5px;color:#5c5148;
   margin-bottom:30px;
+}
+.wreath-notice{
+  text-align:center;
+  margin-top:30px;padding-top:24px;
+  border-top:1px solid var(--line);
+  font-size:13.5px;color:var(--soft);
+  line-height:1.9;letter-spacing:.02em;
 }
 .acc-group{
   border:1px solid var(--line);border-radius:12px;
