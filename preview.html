@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>백찬호 ♥ 송세은 결혼합니다</title>
+<meta name="robots" content="noindex, nofollow">
+
+<!-- 카톡 공유 미리보기 -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="백찬호 ♥ 송세은 결혼합니다">
+<meta property="og:description" content="2026년 10월 24일 토요일 오후 1시 40분 · 상록아트홀 그랜드볼룸">
+<meta property="og:image" content="https://bch-sse.github.io/oct-our-wedding/photos/21.jpg">
+<meta property="og:url" content="https://bch-sse.github.io/oct-our-wedding/">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&display=swap" rel="stylesheet">
+
+<!-- 카카오맵 SDK (JavaScript 키 적용됨) -->
+<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=fc96f2b0bfeb8deb82e54b97a297e946&libraries=services&autoload=false"></script>
+
+<!-- 스타일 -->
+<style>
+:root{
+  --cream:#F7EDEE;
+  --paper:#FFFBFB;
+  --ink:#4A3238;
+  --soft:#997079;
+  --line:#EBD8DC;
+  --accent:#A05561;      /* 더스티 로즈 */
+  --accent-deep:#8E3B4A; /* 버건디 */
+  --blush:#E9D2D7;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--cream);
+  color:var(--ink);
+  font-family:'Gowun Dodum',sans-serif;
+  line-height:1.9;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{
+  max-width:500px;
+  margin:0 auto;
+  background:var(--paper);
+  min-height:100vh;
+  box-shadow:0 0 40px rgba(90,70,45,.08);
+  overflow:hidden;
+}
+.serif{font-family:'Gowun Batang',serif}
+
+/* ── HERO ── */
+.hero{
+  position:relative;
+  min-height:96vh;
+  min-height:96svh;
+  padding:0 28px;
+  text-align:center;
+  color:#fff;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-end;
+  padding-bottom:56px;
+  overflow:hidden;
+  /* 배경사진: photos/main.jpg 넣으면 자동 적용. 없으면 은은한 그라데이션 */
+  background:
+    linear-gradient(180deg, rgba(74,64,56,.15) 0%, rgba(74,64,56,.05) 45%, rgba(74,64,56,.55) 100%),
+    linear-gradient(160deg,#c99aa3,#9d6472);
+  background-size:cover;
+  background-position:center;
+}
+.hero.has-photo{
+  background:
+    linear-gradient(180deg, rgba(50,42,36,.25) 0%, rgba(50,42,36,.08) 40%, rgba(40,32,26,.62) 100%),
+    var(--hero-img) center/cover no-repeat;
+}
+.hero .eyebrow{
+  font-size:11px;
+  letter-spacing:.5em;
+  color:rgba(255,255,255,.92);
+  text-transform:uppercase;
+  margin-bottom:22px;
+  padding-left:.5em;
+  text-shadow:0 1px 8px rgba(0,0,0,.25);
+}
+.hero .names{
+  font-family:'Gowun Batang',serif;
+  font-size:34px;
+  letter-spacing:.06em;
+  color:#fff;
+  margin-bottom:8px;
+  text-shadow:0 2px 12px rgba(0,0,0,.3);
+}
+.hero .names .amp{
+  color:rgba(255,255,255,.85);margin:0 14px;font-size:26px;vertical-align:3px;font-weight:400;
+}
+.hero .hr{
+  width:32px;height:1px;background:rgba(255,255,255,.7);
+  margin:16px auto 20px;
+}
+.hero .when-line{
+  font-size:14px;color:rgba(255,255,255,.95);letter-spacing:.05em;
+  text-shadow:0 1px 8px rgba(0,0,0,.3);margin-bottom:3px;
+}
+.hero .place-line{
+  font-size:14px;color:rgba(255,255,255,.9);letter-spacing:.05em;
+  text-shadow:0 1px 8px rgba(0,0,0,.3);
+}
+
+/* 히어로 D-day 카운트다운 */
+.count-label{
+  margin-top:32px;font-size:12px;letter-spacing:.25em;
+  color:rgba(255,255,255,.9);text-shadow:0 1px 8px rgba(0,0,0,.3);
+  margin-bottom:14px;
+}
+.countdown{
+  display:flex;align-items:center;gap:2px;
+}
+.count-box{
+  display:flex;flex-direction:column;align-items:center;
+  min-width:52px;
+}
+.count-box .n{
+  font-family:'Gowun Batang',serif;
+  font-size:30px;color:#fff;line-height:1.1;
+  text-shadow:0 2px 10px rgba(0,0,0,.35);
+}
+.count-box .u{
+  font-size:11px;color:rgba(255,255,255,.85);
+  letter-spacing:.1em;margin-top:5px;
+}
+.count-sep{
+  font-size:22px;color:rgba(255,255,255,.6);
+  padding:0 4px;transform:translateY(-8px);
+}
+.hero .photo img{width:100%;height:100%;object-fit:cover;display:block}
+.names{
+  font-size:30px;
+  letter-spacing:.04em;
+  color:var(--ink);
+  margin-bottom:10px;
+}
+.names .amp{color:var(--accent);margin:0 12px;font-size:24px;vertical-align:2px}
+.date-line{
+  font-size:14px;
+  color:var(--soft);
+  letter-spacing:.1em;
+}
+
+/* ── 공통 섹션 ── */
+section{padding:52px 32px}
+.divider{
+  width:1px;height:44px;
+  background:var(--line);
+  margin:0 auto;
+}
+.label{
+  text-align:center;
+  font-size:12px;
+  letter-spacing:.4em;
+  color:var(--accent);
+  text-transform:uppercase;
+  margin-bottom:24px;
+  padding-left:.4em;
+}
+
+/* ── 인사말 ── */
+.greeting{text-align:center;background:var(--paper)}
+.greeting p{
+  font-size:15.5px;
+  color:#5c5148;
+  margin-bottom:20px;
+}
+.greeting .verse{
+  font-family:'Gowun Batang',serif;
+  font-size:17px;
+  color:var(--accent-deep);
+  line-height:2.1;
+  margin-bottom:32px;
+}
+.parents{
+  font-size:14px;color:var(--soft);
+  border-top:1px solid var(--line);
+  padding-top:26px;margin-top:8px;
+}
+.parents b{color:var(--ink);font-weight:400}
+.parents .son{color:var(--accent-deep)}
+
+/* ── 날짜/장소 ── */
+.when{text-align:center;background:linear-gradient(180deg,var(--paper),var(--cream))}
+.big-date{
+  font-family:'Gowun Batang',serif;
+  font-size:26px;color:var(--ink);
+  letter-spacing:.05em;margin-bottom:6px;
+}
+.big-date .day{color:var(--accent-deep)}
+.time{font-size:15px;color:var(--soft);margin-bottom:30px}
+.place-name{font-size:18px;font-weight:700;margin-bottom:4px}
+.place-addr{font-size:14px;color:var(--soft)}
+
+
+/* 미니 캘린더 */
+.cal{
+  max-width:280px;margin:32px auto 0;
+  border:1px solid var(--line);border-radius:14px;
+  background:var(--paper);padding:18px 16px;
+}
+.cal table{width:100%;border-collapse:collapse;font-size:13px}
+.cal th{color:var(--accent);font-weight:400;padding:6px 0}
+.cal td{padding:7px 0;color:#6b6055}
+.cal td.sun{color:#c98b7d}
+.cal .mark{
+  background:var(--accent);color:#fff;
+  border-radius:50%;
+  display:inline-block;width:26px;height:26px;line-height:26px;
+}
+
+/* ── 지도 ── */
+.map{background:var(--paper);text-align:center}
+.kakao-map{
+  width:100%;border-radius:14px;overflow:hidden;
+  border:1px solid var(--line);margin-bottom:22px;
+  aspect-ratio:4/3;
+  background:linear-gradient(135deg,#eef0e9,#e2e6dc);
+}
+.kakao-map .map-fallback{
+  width:100%;height:100%;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--soft);font-size:13px;text-align:center;padding:20px;
+}
+.map-btns{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.map-btn{
+  flex:1;min-width:120px;
+  text-decoration:none;
+  background:var(--paper);
+  border:1px solid var(--line);
+  color:var(--ink);
+  padding:13px 8px;border-radius:10px;
+  font-size:14px;
+  transition:.15s;
+  display:flex;align-items:center;justify-content:center;gap:6px;
+}
+.map-btn:active{background:var(--blush)}
+.map-info{
+  margin-top:24px;font-size:13.5px;color:var(--soft);
+  text-align:left;line-height:1.85;
+}
+.map-info b{color:var(--ink);font-weight:400}
+.info-block{
+  padding:16px 0;
+  border-top:1px solid var(--line);
+}
+.info-block:first-child{border-top:none;padding-top:0}
+.info-t{
+  font-size:12px;letter-spacing:.15em;
+  color:var(--accent);margin-bottom:6px;
+}
+.info-block p{color:#6b6055}
+.call-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  margin-top:22px;
+  text-decoration:none;
+  background:var(--paper);color:var(--accent-deep);
+  border:1px solid var(--line);
+  padding:13px 24px;border-radius:10px;
+  font-size:14px;letter-spacing:.02em;
+  transition:.15s;
+}
+.call-btn:active{background:var(--blush)}
+
+/* ── 갤러리 ── */
+.gallery{background:var(--cream)}
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+}
+.grid .cell{
+  aspect-ratio:1;border-radius:8px;overflow:hidden;
+  background:linear-gradient(160deg,var(--blush),#d3b3ba);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--soft);font-size:12px;cursor:pointer;
+}
+.grid .cell img{width:100%;height:100%;object-fit:cover;display:block}
+.grid .tall{grid-row:span 2;aspect-ratio:auto}
+
+/* 라이트박스 */
+.lightbox{
+  position:fixed;inset:0;background:rgba(40,32,24,.92);
+  display:none;align-items:center;justify-content:center;
+  z-index:50;padding:20px;
+}
+.lightbox.on{display:flex}
+.lightbox img{max-width:100%;max-height:90vh;border-radius:8px}
+.lightbox .close{
+  position:absolute;top:20px;right:24px;
+  color:#fff;font-size:30px;background:none;border:none;cursor:pointer;
+}
+
+/* ── 계좌 ── */
+.account{background:var(--paper)}
+.account .lead{
+  text-align:center;font-size:14.5px;color:#5c5148;
+  margin-bottom:30px;
+}
+.wreath-notice{
+  text-align:center;
+  margin-top:30px;padding-top:24px;
+  border-top:1px solid var(--line);
+  font-size:13.5px;color:var(--soft);
+  line-height:1.9;letter-spacing:.02em;
+}
+.acc-group{
+  border:1px solid var(--line);border-radius:12px;
+  margin-bottom:12px;overflow:hidden;
+}
+.acc-head{
+  width:100%;text-align:left;
+  background:var(--paper);border:none;cursor:pointer;
+  padding:16px 20px;font-size:15px;color:var(--ink);
+  display:flex;justify-content:space-between;align-items:center;
+  font-family:inherit;
+}
+.acc-head .arrow{color:var(--accent);transition:.25s;font-size:13px}
+.acc-group.open .arrow{transform:rotate(180deg)}
+.acc-body{
+  max-height:0;overflow:hidden;transition:max-height .3s ease;
+  background:var(--cream);
+}
+.acc-row{
+  padding:14px 20px;border-top:1px solid var(--line);
+  display:flex;justify-content:space-between;align-items:center;gap:12px;
+}
+.acc-row .who{font-size:13px;color:var(--soft);margin-bottom:2px}
+.acc-row .num{font-size:14px;color:var(--ink)}
+.copy-btn{
+  flex-shrink:0;
+  background:var(--accent);color:#fff;border:none;
+  padding:8px 14px;border-radius:8px;font-size:12.5px;cursor:pointer;
+  font-family:inherit;transition:.15s;
+}
+.copy-btn:active{background:var(--accent-deep)}
+.copy-btn.done{background:var(--accent-deep)}
+
+/* ── 푸터 ── */
+footer{
+  text-align:center;padding:44px 32px 56px;
+  background:var(--cream);
+}
+footer .heart{color:var(--accent);font-size:20px;margin-bottom:14px}
+footer p{font-size:13px;color:var(--soft);letter-spacing:.05em}
+
+/* 등장 애니메이션 */
+.reveal{opacity:0;transform:translateY(20px);transition:.8s ease}
+.reveal.in{opacity:1;transform:none}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HERO -->
+  <div class="hero" id="hero">
+    <div class="eyebrow">Wedding Invitation</div>
+    <div class="names">백찬호<span class="amp">·</span>송세은</div>
+    <div class="hr"></div>
+    <div class="when-line">2026년 10월 24일 토요일 오후 1시 40분</div>
+    <div class="place-line">상록아트홀 그랜드볼룸 · L층</div>
+
+    <div class="count-label">결혼식까지</div>
+    <div class="countdown" id="countdown">
+      <div class="count-box"><span class="n" id="cd-d">00</span><span class="u">일</span></div>
+      <span class="count-sep">:</span>
+      <div class="count-box"><span class="n" id="cd-h">00</span><span class="u">시간</span></div>
+      <span class="count-sep">:</span>
+      <div class="count-box"><span class="n" id="cd-m">00</span><span class="u">분</span></div>
+      <span class="count-sep">:</span>
+      <div class="count-box"><span class="n" id="cd-s">00</span><span class="u">초</span></div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 인사말 -->
+  <section class="greeting reveal">
+    <div class="label">Invitation</div>
+    <p class="verse serif">
+      가을빛이 짙어지는 날,<br>
+      서로의 일상에 스며든 두 사람이 닿아<br>
+      이제는 같은 방향으로<br>
+      걸어가려 합니다.
+    </p>
+    <p>
+      소중한 날 함께하시어<br>
+      축복해 주시면 감사하겠습니다.
+    </p>
+    <div class="parents">
+      <b>백창일 · 문보옥</b> 의 아들 <b class="son">백찬호</b><br>
+      <b>송필근 · 장상해</b> 의 딸 <b class="son">송세은</b>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- 날짜/장소 -->
+  <section class="when reveal">
+    <div class="label">When &amp; Where</div>
+    <div class="big-date serif">2026년 10월 24일 <span class="day">토요일</span></div>
+    <div class="time">오후 1시 40분</div>
+    <div class="place-name">상록아트홀 그랜드볼룸 (L층)</div>
+    <div class="place-addr">서울 강남구 언주로 508 상록회관</div>
+
+    <div class="cal">
+      <table>
+        <tr><th class="sun">일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>토</th></tr>
+        <tr><td class="sun"></td><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td></tr>
+        <tr><td class="sun">4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+        <tr><td class="sun">11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td></tr>
+        <tr><td class="sun">18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td><span class="mark">24</span></td></tr>
+        <tr><td class="sun">25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- 갤러리 -->
+  <section class="gallery reveal">
+    <div class="label">Gallery</div>
+    <div class="grid" id="grid">
+      <div class="cell tall" data-src="photos/23.jpg"><img src="photos/23.jpg" alt="갤러리 사진" loading="lazy"></div>
+      <div class="cell" data-src="photos/60.jpg"><img src="photos/60.jpg" alt="갤러리 사진" loading="lazy"></div>
+      <div class="cell" data-src="photos/65.jpg"><img src="photos/65.jpg" alt="갤러리 사진" loading="lazy"></div>
+      <div class="cell" data-src="photos/75.jpg"><img src="photos/75.jpg" alt="갤러리 사진" loading="lazy"></div>
+      <div class="cell tall" data-src="photos/87.jpg"><img src="photos/87.jpg" alt="갤러리 사진" loading="lazy"></div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- 지도 -->
+  <section class="map reveal">
+    <div class="label">Location</div>
+    <div id="kakaoMap" class="kakao-map"></div>
+    <div class="map-btns">
+      <a class="map-btn" href="https://map.naver.com/p/search/상록아트홀" target="_blank" rel="noopener">🗺️ 네이버지도</a>
+      <a class="map-btn" href="https://map.kakao.com/?q=상록아트홀" target="_blank" rel="noopener">📍 카카오맵</a>
+    </div>
+    <div class="map-info">
+      <div class="info-block">
+        <div class="info-t">주소</div>
+        <p>서울특별시 강남구 언주로 508 (역삼동 701번지)<br>상록아트홀 그랜드볼룸 · L층</p>
+      </div>
+      <div class="info-block">
+        <div class="info-t">지하철 · 셔틀버스</div>
+        <p>2호선, 수인분당선 <b>선릉역 5번 출구</b> 도보 5분<br>
+        셔틀버스: 선릉역 5번 출구에서 운행</p>
+      </div>
+      <div class="info-block">
+        <div class="info-t">버스</div>
+        <p><b>KT강남지사 하차</b> 141(도봉산), 242(중랑·신내역), 361(여의도)<br>
+        <b>한국기술센터·상록회관 하차</b> 146(상계동), 341(하남), 360(송파), 740(덕은동)</p>
+      </div>
+      <div class="info-block">
+        <div class="info-t">자가용</div>
+        <p>네비게이션에 <b>"서울상록회관"</b> 또는<br>
+        <b>"서울시 강남구 언주로 508"</b> 입력</p>
+      </div>
+      <div class="info-block">
+        <div class="info-t">주차</div>
+        <p>동시 950대 주차 가능</p>
+      </div>
+    </div>
+    <a class="call-btn" href="tel:0225645757">📞 예식장 전화 02-564-5757</a>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- 계좌 -->
+  <section class="account reveal">
+    <div class="label">Gift</div>
+    <p class="lead">참석이 어려우신 분들을 위해<br>마음 전하실 곳을 안내드립니다.</p>
+
+    <div class="acc-group">
+      <button class="acc-head" onclick="toggleAcc(this)">
+        신랑측 마음 전하실 곳 <span class="arrow">▾</span>
+      </button>
+      <div class="acc-body">
+        <div class="acc-row">
+          <div>
+            <div class="who">신랑 · 백찬호</div>
+            <div class="num">○○은행 000-000-000000</div>
+          </div>
+          <button class="copy-btn" onclick="copyAcc(this,'000000000000')">복사</button>
+        </div>
+        <div class="acc-row">
+          <div>
+            <div class="who">아버지 · 백창일</div>
+            <div class="num">○○은행 123-456-789013</div>
+          </div>
+          <button class="copy-btn" onclick="copyAcc(this,'123456789013')">복사</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="acc-group">
+      <button class="acc-head" onclick="toggleAcc(this)">
+        신부측 마음 전하실 곳 <span class="arrow">▾</span>
+      </button>
+      <div class="acc-body">
+        <div class="acc-row">
+          <div>
+            <div class="who">신부 · 송세은</div>
+            <div class="num">○○은행 000-000-000000</div>
+          </div>
+          <button class="copy-btn" onclick="copyAcc(this,'000000000000')">복사</button>
+        </div>
+        <div class="acc-row">
+          <div>
+            <div class="who">아버지 · 송필근</div>
+            <div class="num">○○은행 987-654-321099</div>
+          </div>
+          <button class="copy-btn" onclick="copyAcc(this,'987654321099')">복사</button>
+        </div>
+      </div>
+    </div>
+
+    <p class="wreath-notice">
+      정중히 화환은 사양하오니<br>
+      너른 마음으로 양해 부탁드립니다.
+    </p>
+  </section>
+
+  <footer>
+    <div class="heart">♥</div>
+    <p>백찬호 &amp; 송세은 · 2026. 10. 24</p>
+  </footer>
+
+</div>
+
+<!-- 라이트박스 -->
+<div class="lightbox" id="lb" onclick="closeLb(event)">
+  <button class="close" onclick="closeLb(event)">×</button>
+  <img id="lb-img" src="" alt="">
+</div>
+
+
+<!-- 스크립트 -->
+<script>
+// 배경사진 자동 적용: photos/21.jpg 파일을 넣으면 히어로 배경으로 뜹니다.
+(function(){
+  const hero=document.getElementById('hero');
+  const img=new Image();
+  img.onload=function(){
+    hero.style.setProperty('--hero-img','url("photos/21.jpg")');
+    hero.classList.add('has-photo');
+  };
+  img.src='photos/21.jpg';
+})();
+
+// 실시간 카운트다운 (예식 일시를 본인 것으로 수정하세요)
+(function(){
+  // 2026년 10월 24일 오후 1시 40분 (월은 0부터: 9=10월)
+  const wedding=new Date(2026,9,24,13,40,0);
+  const d=document.getElementById('cd-d');
+  const h=document.getElementById('cd-h');
+  const m=document.getElementById('cd-m');
+  const s=document.getElementById('cd-s');
+  const label=document.querySelector('.count-label');
+  if(!d) return;
+  const pad=n=>String(n).padStart(2,'0');
+  function tick(){
+    const now=new Date();
+    let diff=Math.floor((wedding-now)/1000);
+    if(diff<=0){
+      label.textContent='오늘은 저희의 결혼식입니다 🎉';
+      d.textContent='00';h.textContent='00';m.textContent='00';s.textContent='00';
+      clearInterval(timer);
+      return;
+    }
+    const days=Math.floor(diff/86400); diff%=86400;
+    const hrs=Math.floor(diff/3600); diff%=3600;
+    const mins=Math.floor(diff/60);
+    const secs=diff%60;
+    d.textContent=pad(days);
+    h.textContent=pad(hrs);
+    m.textContent=pad(mins);
+    s.textContent=pad(secs);
+  }
+  tick();
+  const timer=setInterval(tick,1000);
+})();
+
+// 카카오맵 표시 (주소를 좌표로 변환해서 마커 표시)
+(function(){
+  const el=document.getElementById('kakaoMap');
+  if(!el) return;
+  const VENUE='서울특별시 강남구 언주로 508';   // 예식장 주소
+  const VENUE_NAME='상록아트홀 그랜드볼룸';
+
+  function showFallback(){
+    el.innerHTML='<div class="map-fallback">지도를 불러오지 못했습니다.<br>아래 지도 앱 버튼을 눌러 위치를 확인해 주세요.</div>';
+  }
+  // SDK 로드 실패(키 미설정 등) 시 안내
+  if(typeof kakao==='undefined'||!kakao.maps){
+    showFallback();
+    return;
+  }
+  kakao.maps.load(function(){
+    const geocoder=new kakao.maps.services.Geocoder();
+    geocoder.addressSearch(VENUE, function(result,status){
+      if(status===kakao.maps.services.Status.OK){
+        const coords=new kakao.maps.LatLng(result[0].y, result[0].x);
+        const map=new kakao.maps.Map(el,{center:coords,level:4});
+        const marker=new kakao.maps.Marker({map:map,position:coords});
+        const iw=new kakao.maps.InfoWindow({
+          content:'<div style="padding:6px 10px;font-size:12px;white-space:nowrap;">'+VENUE_NAME+'</div>'
+        });
+        iw.open(map,marker);
+        map.setDraggable(true);
+        // 마커 클릭 시 카카오맵 길찾기로 이동
+        kakao.maps.event.addListener(marker,'click',function(){
+          window.open('https://map.kakao.com/?q='+encodeURIComponent(VENUE_NAME));
+        });
+      }else{
+        showFallback();
+      }
+    });
+  });
+})();
+
+// 계좌 접기
+function toggleAcc(btn){
+  const g=btn.parentElement;
+  const body=g.querySelector('.acc-body');
+  const open=g.classList.toggle('open');
+  body.style.maxHeight=open?body.scrollHeight+'px':'0';
+}
+// 계좌 복사
+function copyAcc(btn,num){
+  navigator.clipboard.writeText(num).then(()=>{
+    const t=btn.textContent;
+    btn.textContent='복사됨';btn.classList.add('done');
+    setTimeout(()=>{btn.textContent=t;btn.classList.remove('done')},1400);
+  }).catch(()=>{
+    // 클립보드 미지원 폴백
+    prompt('계좌번호를 복사하세요',num);
+  });
+}
+// 갤러리 라이트박스 (사진 넣으면 data-src에 경로 지정)
+document.querySelectorAll('#grid .cell').forEach(c=>{
+  c.addEventListener('click',()=>{
+    const src=c.dataset.src;
+    if(!src) return;
+    document.getElementById('lb-img').src=src;
+    document.getElementById('lb').classList.add('on');
+  });
+});
+function closeLb(e){
+  if(e.target.id==='lb'||e.target.classList.contains('close')||e.target.id==='lb-img'){
+    document.getElementById('lb').classList.remove('on');
+  }
+}
+// 스크롤 등장
+const io=new IntersectionObserver(es=>{
+  es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')});
+},{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+</script>
+</body>
+</html>
